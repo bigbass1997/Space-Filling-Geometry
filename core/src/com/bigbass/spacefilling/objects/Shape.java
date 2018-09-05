@@ -3,14 +3,15 @@ package com.bigbass.spacefilling.objects;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Vector2;
 
-public interface Shape {
+public abstract class Shape {
 	
-	void render(ShapeRenderer sr);
+	public abstract void render(ShapeRenderer sr);
 	
-	boolean intersects(Shape b);
+	public abstract Vector2[] getVerti();
 	
-	Vector2[] getVerti();
+	public abstract float area();
 	
-	float area();
-
+	public boolean intersects(Shape b){
+		return false;
+	}
 }

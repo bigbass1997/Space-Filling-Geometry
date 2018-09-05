@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 
-public class Circle implements Shape {
+public class Circle extends Shape {
 	
 	public float r;
 	public Vector2 pos;

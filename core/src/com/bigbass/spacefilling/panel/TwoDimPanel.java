@@ -56,7 +56,7 @@ public class TwoDimPanel extends Panel {
 		sr.setProjectionMatrix(cam.combined);
 		
 		sim = new CircleSimulation(
-				250000, 1.5f, 10000, 200, 50, 800, 800
+				200000, 1.4f, 10000, 200, 50, 800, 800
 		);
 	}
 	
@@ -95,7 +95,7 @@ public class TwoDimPanel extends Panel {
 			sim.iterate();
 		}
 		
-		String info = String.format("Data:%n  FPS: %s%n  N: %s%n  MTry: %.5f%%%n  #Try: %s",
+		String info = String.format("Data:%n  FPS: %s%n  N: %s%n  %%Try: %.5f%%%n  #Try: %s",
 				Gdx.graphics.getFramesPerSecond(),
 				sim.getCount(),
 				sim.getTryPercentage(),
