@@ -27,7 +27,7 @@ public class Circle extends Shape {
 		sr.setColor(color);
 		sr.circle(pos.x, pos.y, r, Math.max(1, (int)(30 * (float)Math.cbrt(r))));
 	}
-
+/*
 	@Override
 	public boolean intersects(Shape shape){
 		if(shape instanceof Circle){
@@ -43,7 +43,7 @@ public class Circle extends Shape {
 			return false;
 		}
 	}
-
+*/
 	@Override
 	public Vector2[] getVerti() {
 		Vector2[] arr = new Vector2[Math.max(1, (int)(6 * (float)Math.cbrt(r)))];

@@ -1,12 +1,12 @@
 package com.bigbass.spacefilling.sim;
 
 import com.badlogic.gdx.graphics.Color;
-import com.bigbass.spacefilling.objects.Circle;
 import com.bigbass.spacefilling.objects.Shape;
+import com.bigbass.spacefilling.objects.Square;
 
-public class CircleSimulation extends Simulation {
+public class SquareSimulation extends Simulation {
 	
-	public CircleSimulation(float initArea, float constant, int limitN, float x, float y, float width, float height){
+	public SquareSimulation(float initArea, float constant, int limitN, float x, float y, float width, float height){
 		super(initArea, constant, limitN, x, y, width, height);
 	}
 	
@@ -27,7 +27,7 @@ public class CircleSimulation extends Simulation {
 		
 		// Prepare color of shape
 		Color color = new Color();
-		color.fromHsv(120f + (rand.nextFloat() * 60f) + (50f * (1-(shapes.size() / 5000f))), 1, 1);
+		color.fromHsv(80f + (rand.nextFloat() * 60f) + (50f * (1-(shapes.size() / 5000f))), 1, 1);
 		color.a = 1;
 		
 		// Start shape creation process
@@ -36,7 +36,7 @@ public class CircleSimulation extends Simulation {
 			float x = rand.nextFloat() * dim.x;
 			float y = rand.nextFloat() * dim.y;
 			
-			Circle c = new Circle(pos.x + x, pos.y + y, area, color);
+			Square c = new Square(pos.x + x, pos.y + y, area, color);
 			
 			boolean intersects = false;
 			for(Shape other : shapes){
@@ -55,7 +55,7 @@ public class CircleSimulation extends Simulation {
 			tries++;
 			if(tries > maxTries){
 				return;
-			}			
+			}
 		}
 	}
 }

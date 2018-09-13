@@ -11,7 +11,9 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.bigbass.spacefilling.Main;
 import com.bigbass.spacefilling.SimOptions;
+import com.bigbass.spacefilling.objects.Square;
 import com.bigbass.spacefilling.sim.CircleSimulation;
+import com.bigbass.spacefilling.sim.SquareSimulation;
 import com.bigbass.spacefilling.skins.SkinManager;
 
 public class TwoDimPanel extends Panel {
@@ -24,7 +26,7 @@ public class TwoDimPanel extends Panel {
 	
 	private float scalar = 1;
 	
-	private CircleSimulation sim;
+	private SquareSimulation sim;
 	
 	public TwoDimPanel() {
 		super();
@@ -55,7 +57,7 @@ public class TwoDimPanel extends Panel {
 		sr.setAutoShapeType(true);
 		sr.setProjectionMatrix(cam.combined);
 		
-		sim = new CircleSimulation(
+		sim = new SquareSimulation(
 				200000, 1.4f, 10000, 200, 50, 800, 800
 		);
 	}

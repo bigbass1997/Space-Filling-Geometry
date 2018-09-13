@@ -34,7 +34,7 @@ public abstract class Simulation {
 		
 		shapes = new ArrayList<Shape>();
 		
-		maxTries = 100000000;
+		maxTries = 1000000;
 		mostTries = 0;
 		
 		rand = new Random();
